@@ -1,0 +1,52 @@
+.cRelease {
+	display: block;
+	padding: 15px 0 15px 15px;
+	border-top: 2px solid rgba( 0,0,0,0.075);
+	color: inherit;
+}
+
+	.cRelease:not( .cRelease_active ):hover {
+		background: rgba(255,255,255,0.4);
+	}
+
+	.cRelease:hover {
+		color: inherit;
+	}
+
+	.cRelease .ipsType_sectionHead {
+		font-size: 20px;
+		line-height: 1;
+		margin-bottom: 5px;
+		font-weight: 500;
+	}
+
+	.cRelease .cRelease_security {
+		margin-top: 12px;
+		margin-right: 10px;
+	}
+
+.cRelease_active {
+	background: #fff;
+	border-color: transparent;
+}
+	
+	li:first-child > .cRelease,
+	.cRelease_active + .cRelease {
+		border-color: transparent;
+	}
+
+.cReleaseColumn {
+	padding-right: 0;
+}
+
+	.cReleaseColumn [data-role="tablePagination"] {
+		background: #fff;
+		padding: 5px;
+		margin-top: 10px;
+		margin-right: 7px;
+		text-align: center;
+	}
+
+	.cReleaseColumn .ipsPagination_pageJump {
+		display: none;
+	}

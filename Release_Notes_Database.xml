@@ -1,0 +1,792 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database content_db_lang_sl="release" content_db_lang_pl="releases" content_db_lang_su="Release" content_db_lang_pu="Releases" content_db_lang_ia="a release">
+ <data use_categories="0" template_listing="releasenotes" template_display="releasenotes" template_categories="category_index" all_editable="0" revisions="1" field_title="3" field_content="4" field_sort="field_5" field_direction="desc" field_perpage="25" comment_approve="0" record_approve="0" rss="0" comment_bump="1" forum_record="0" forum_comments="0" forum_delete="0" forum_forum="0" forum_prefix="" forum_suffix="" search="1" tags_enabled="0" tags_noprefixes="1" tags_predefined="" cat_index_type="0" template_form="form" template_featured="category_articles" options="1">
+  <fixed_field_perms><![CDATA[{"record_image":{"visible":false,"perm_view":"*","perm_2":"*","perm_3":"*"}}]]></fixed_field_perms>
+  <featured_settings><![CDATA[{"featured":0,"perpage":10,"pagination":null,"sort":"record_publish_date","direction":"desc","categories":0}]]></featured_settings>
+  <name><![CDATA[Release Notes]]></name>
+  <description><![CDATA[]]></description>
+ </data>
+ <field field_id="5" field_key="long-id" field_type="Number" field_required="1" field_user_editable="0" field_position="1" field_max_length="0" field_html="0" field_truncate="0" field_display_listing="0" field_display_display="0" field_format_opts="" field_validator="0" field_topic_format="" field_filter="0" field_allowed_extensions="" field_is_multiple="0" field_is_searchable="1" field_validator_custom="" field_display_commentform="1" field_unique="0">
+  <field_extra>{&quot;on&quot;:false,&quot;places&quot;:0}</field_extra>
+  <field_default_value></field_default_value>
+  <field_name>Long ID</field_name>
+  <field_description></field_description>
+  <field_display_json>{&quot;display&quot;:{&quot;method&quot;:&quot;1&quot;,&quot;html&quot;:&quot;&quot;,&quot;where&quot;:&quot;top&quot;},&quot;listing&quot;:{&quot;method&quot;:&quot;1&quot;,&quot;html&quot;:&quot;&quot;,&quot;right&quot;:false}}</field_display_json>
+ </field>
+ <field field_id="3" field_key="titlefield_2" field_type="Text" field_required="1" field_user_editable="1" field_position="0" field_max_length="255" field_html="0" field_truncate="100" field_display_listing="1" field_display_display="1" field_format_opts="" field_validator="" field_topic_format="" field_filter="0" field_allowed_extensions="" field_is_multiple="0" field_is_searchable="1" field_validator_custom="" field_display_commentform="0" field_unique="0">
+  <field_extra></field_extra>
+  <field_default_value></field_default_value>
+  <field_name>Title</field_name>
+  <field_display_json>{&quot;display&quot;:{&quot;method&quot;:null},&quot;listing&quot;:{&quot;method&quot;:null}}</field_display_json>
+ </field>
+ <field field_id="4" field_key="contentfield_2" field_type="Editor" field_required="1" field_user_editable="1" field_position="0" field_max_length="0" field_html="0" field_truncate="100" field_display_listing="1" field_display_display="1" field_format_opts="" field_validator="" field_topic_format="{value}" field_filter="0" field_allowed_extensions="" field_is_multiple="0" field_is_searchable="1" field_validator_custom="" field_display_commentform="0" field_unique="0">
+  <field_extra></field_extra>
+  <field_default_value></field_default_value>
+  <field_name>Content</field_name>
+  <field_display_json>{&quot;display&quot;:{&quot;method&quot;:null},&quot;listing&quot;:{&quot;method&quot;:null}}</field_display_json>
+ </field>
+ <field field_id="6" field_key="release-date" field_type="Date" field_required="0" field_user_editable="0" field_position="2" field_max_length="0" field_html="0" field_truncate="0" field_display_listing="1" field_display_display="1" field_format_opts="{&quot;1&quot;:&quot;strtolower&quot;}" field_validator="0" field_topic_format="" field_filter="0" field_allowed_extensions="[]" field_is_multiple="0" field_is_searchable="1" field_validator_custom="" field_display_commentform="1" field_unique="0">
+  <field_extra>{&quot;timezone&quot;:&quot;UTC&quot;,&quot;time&quot;:false}</field_extra>
+  <field_default_value></field_default_value>
+  <field_name>Release Date</field_name>
+  <field_description></field_description>
+  <field_display_json><![CDATA[{"display":{"method":"custom","html":"{{if $formValue}}Released {$value}{{else}}<span class='ipsType_light'><em>In Development<\/em><\/span>{{endif}}","where":"top"},"listing":{"method":"custom","html":"{{if $formValue}}Released {$value}{{else}}<span class='ipsType_light'><em>In Development<\/em><\/span>{{endif}}"}}]]></field_display_json>
+ </field>
+ <field field_id="7" field_key="security-release" field_type="YesNo" field_required="1" field_user_editable="0" field_position="3" field_max_length="0" field_html="0" field_truncate="0" field_display_listing="1" field_display_display="1" field_format_opts="{&quot;1&quot;:&quot;strtolower&quot;}" field_validator="0" field_topic_format="" field_filter="0" field_allowed_extensions="[]" field_is_multiple="0" field_is_searchable="1" field_validator_custom="" field_display_commentform="0" field_unique="0">
+  <field_extra></field_extra>
+  <field_default_value></field_default_value>
+  <field_name>Security Release</field_name>
+  <field_description></field_description>
+  <field_display_json><![CDATA[{"display":{"method":"custom","html":"{{if $formValue == \"1\"}}<span class='ipsType_large ipsType_negative ipsPos_right cRelease_security' data-ipsTooltip title='This is a security release'><i class='fa fa-warning'><\/i><\/span>{{endif}}","where":"top"},"listing":{"method":"custom","html":"{{if $formValue == \"1\"}}<span class='ipsType_large ipsType_negative ipsPos_right cRelease_security' data-ipsTooltip title='This is a security release'><i class='fa fa-warning'><\/i><\/span>{{endif}}"}}]]></field_display_json>
+ </field>
+ <field field_id="8" field_key="current-release" field_type="YesNo" field_required="0" field_user_editable="0" field_position="4" field_max_length="0" field_html="0" field_truncate="0" field_display_listing="1" field_display_display="1" field_format_opts="{&quot;1&quot;:&quot;strtolower&quot;}" field_validator="0" field_topic_format="" field_filter="0" field_allowed_extensions="[]" field_is_multiple="0" field_is_searchable="1" field_validator_custom="" field_display_commentform="0" field_unique="0">
+  <field_extra></field_extra>
+  <field_default_value></field_default_value>
+  <field_name>Current Release</field_name>
+  <field_description></field_description>
+  <field_display_json><![CDATA[{"display":{"method":"custom","html":"{{if $formValue == 1}}<span class='ipsBadge ipsBadge_positive' data-ipsTooltip title='This is the most current available release'>Current Release<\/span>{{endif}}\r\n","where":"top"},"listing":{"method":"custom","html":"{{if $formValue == 1}}<span class='ipsBadge ipsBadge_positive' data-ipsTooltip title='This is the most current available release'>Current Release<\/span>{{endif}}"}}]]></field_display_json>
+ </field>
+ <field field_id="9" field_key="beta-release" field_type="YesNo" field_required="0" field_user_editable="0" field_position="5" field_max_length="0" field_html="0" field_truncate="0" field_display_listing="1" field_display_display="1" field_format_opts="{&quot;1&quot;:&quot;strtolower&quot;}" field_validator="0" field_topic_format="" field_filter="0" field_allowed_extensions="[]" field_is_multiple="0" field_is_searchable="1" field_validator_custom="" field_display_commentform="1" field_unique="0">
+  <field_extra></field_extra>
+  <field_default_value></field_default_value>
+  <field_name>Beta Release</field_name>
+  <field_description></field_description>
+  <field_display_json><![CDATA[{"display":{"method":"custom","html":"{{if $formValue == 1}}<span class='ipsBadge ipsBadge_negative' data-ipsTooltip title='A beta is available for this version'>Beta<\/span>{{endif}}\r\n","where":"top"},"listing":{"method":"custom","html":"{{if $formValue == 1}}<span class='ipsBadge ipsBadge_negative' data-ipsTooltip title='A beta is available for this version'>Beta<\/span>{{endif}}\r\n"}}]]></field_display_json>
+ </field>
+ <field field_id="10" field_key="additional-information" field_type="Editor" field_required="0" field_user_editable="0" field_position="6" field_max_length="0" field_html="0" field_truncate="0" field_display_listing="0" field_display_display="0" field_format_opts="" field_validator="0" field_topic_format="" field_filter="0" field_allowed_extensions="" field_is_multiple="0" field_is_searchable="1" field_validator_custom="" field_display_commentform="1" field_unique="0">
+  <field_extra></field_extra>
+  <field_default_value></field_default_value>
+  <field_name>Additional Information</field_name>
+  <field_description></field_description>
+  <field_display_json>{&quot;display&quot;:{&quot;method&quot;:&quot;1&quot;,&quot;html&quot;:&quot;&quot;,&quot;where&quot;:&quot;top&quot;},&quot;listing&quot;:{&quot;method&quot;:&quot;1&quot;,&quot;html&quot;:&quot;&quot;,&quot;right&quot;:false}}</field_display_json>
+ </field>
+ <category category_id="2" category_parent_id="0" category_position="0" category_records_queued="0" category_has_perms="0" category_show_records="1" category_furl_name="records" category_allow_rating="0" category_fields="" category_records_future="0" category_record_reviews="0" category_record_reviews_queued="0" category_options="0" category_template_listing="" category_template_display="" category_can_view_others="1">
+  <category_name>Records</category_name>
+  <category_description></category_description>
+ </category>
+ <template template_title="categoryFooter" template_group="releasenotes" template_location="database" template_original_group="listing">
+  <template_params>$category, $table, $activeFilters</template_params>
+  <template_content><![CDATA[
+{{if ! \IPS\Request::i()->isAjax() AND ! isset( \IPS\Request::i()->advancedSearchForm ) AND $category->show_records}}
+	<ul class="ipsToolList ipsToolList_horizontal ipsClearfix ipsSpacer_both ipsResponsive_showPhone ipsResponsive_block">
+		{{if $category->can('add')}}
+			<li class='ipsToolList_primaryAction'>
+				<a class="ipsButton ipsButton_medium ipsButton_important ipsButton_fullWidth" href="{$category->url()->setQueryString( array( 'do' => 'form', 'd' => \IPS\cms\Databases\Dispatcher::i()->databaseId ) )}">{lang="cms_add_new_record_button" sprintf="\IPS\cms\Databases::load( $category->database_id )->recordWord( 1 )"}</a>
+			</li>
+		{{endif}}
+		{{if \IPS\Member::loggedIn()->member_id}}
+			<li>
+				<a class="ipsButton ipsButton_medium ipsButton_fullWidth ipsButton_link" href="{$category->url()->setQueryString( 'do', 'markRead' )->csrf()}"><i class="fa fa-check"></i> {lang="cms_mark_read"}</a>
+			</li>
+		{{endif}}
+	</ul>
+{{endif}}
+
+{{if !\IPS\Request::i()->advancedSearchForm}}
+	<div class="ipsResponsive_showPhone ipsResponsive_block ipsSpacer ipsSpacer_both ipsClearfix">
+		{template="follow" app="core" group="global" params="'cms','categories' . $category->database_id, $category->_id, \IPS\cms\Records::containerFollowerCount( $category )"}
+	</div>
+{{endif}}
+]]></template_content>
+ </template>
+ <template template_title="categoryHeader" template_group="releasenotes" template_location="database" template_original_group="listing">
+  <template_params>$category, $table, $activeFilters</template_params>
+  <template_content><![CDATA[{{if !\IPS\Request::i()->advancedSearchForm}}
+	<div class="ipsType_center ipsSpacer_bottom ipsSpacer_top">
+		<h1 class="ipsType_veryLarge ipsType_reset">{$category->_title}</h1>
+		<div class="ipsType_richText ipsType_large ipsType_light ipsSpacer_bottom">
+			{$category->_description|raw}
+		</div>
+		<div class='ipsResponsive_noFloat ipsResponsive_hidePhone'>
+			{template="follow" app="core" group="global" params="'cms','categories' . $category->database_id, $category->_id, \IPS\cms\Records::containerFollowerCount( $category )"}
+		</div>
+	</div>
+{{endif}}
+
+{{if $category->hasChildren() AND ! isset( \IPS\Request::i()->advancedSearchForm )}}
+	<div class="ipsBox ipsSpacer_bottom">
+		<h2 class='ipsType_sectionTitle ipsType_reset'>{lang="content_subcategories_title"}</h2>
+		<ol class="ipsDataList">
+			{{foreach $category->children() as $cat}}
+				{template="categoryRow" group="category_index" location="database" app="cms" params="$cat"}
+			{{endforeach}}
+		</ol>
+	</div>
+{{endif}}
+
+{{if $category->can('add')}}
+	{{if ! \IPS\Request::i()->isAjax() AND ! isset( \IPS\Request::i()->advancedSearchForm ) AND $category->show_records}}
+		<ul class="ipsToolList ipsToolList_horizontal ipsClearfix ipsSpacer_both ipsResponsive_hidePhone">
+			<li class='ipsToolList_primaryAction'>
+				<a class="ipsButton ipsButton_medium ipsButton_important ipsButton_fullWidth" href="{$category->url()->setQueryString( array( 'do' => 'form', 'd' => \IPS\cms\Databases\Dispatcher::i()->databaseId ) )}">{lang="cms_add_new_record_button" sprintf="\IPS\cms\Databases::load( $category->database_id )->recordWord( 1 )"}</a>
+			</li>
+		</ul>
+	{{endif}}
+{{endif}}
+
+{{if count( $activeFilters )  AND ! isset( \IPS\Request::i()->advancedSearchForm )}}
+	{template="filterMessage" app="cms" location="database" group="release_notes" params="$activeFilters, $category"}
+{{endif}}]]></template_content>
+ </template>
+ <template template_title="categoryTable" template_group="releasenotes" template_location="database" template_original_group="listing">
+  <template_params>$table, $headers, $rows, $quickSearch</template_params>
+  <template_content><![CDATA[
+<div class='ipsAreaBackground ipsPad_half' data-baseurl='{$table->baseUrl}' data-resort='{$table->resortKey}' data-controller='core.global.core.table{{if $table->canModerate()}},core.front.core.moderation{{endif}}'>
+	
+	<div class='ipsAreaBackground_reset ipsColumns ipsColumns_collapsePhone' data-controller='pages.front.releaseNotes.main'>
+		<div class='ipsColumn ipsColumn_wide ipsAreaBackground cReleaseColumn' data-role='releases'>
+			{{if ! count($rows)}}
+				<div class="ipsPad">
+					{lang="cms_no_records_to_show" sprintf="\IPS\cms\Databases::load( \IPS\cms\Databases\Dispatcher::i()->databaseId )->recordWord()"}
+				</div>
+			{{else}}
+				<ol class='ipsDataList ipsDataList_zebra ipsClear cCmsListing {{foreach $table->classes as $class}}{$class} {{endforeach}}' id='elTable_{$table->uniqueId}' data-role="tableRows">
+					{template="$table->rowsTemplate[1]" params="$table, $headers, $rows" object="$table->rowsTemplate[0]"}
+				</ol>
+			{{endif}}
+			{{if $table->pages > 1}}
+				<div data-role="tablePagination">
+					{template="pagination" group="global" app="core" location="global" params="$table->baseUrl, $table->pages, $table->page, $table->limit"}
+				</div>
+			{{endif}}
+		</div>
+		<div class='ipsColumn ipsColumn_fluid'>
+			<div data-role='releaseInfo' class='ipsPad_double'></div>
+		</div>
+	</div>
+</div>]]></template_content>
+ </template>
+ <template template_title="comment" template_group="releasenotes" template_location="database" template_original_group="display">
+  <template_params>$item, $comment, $editorName, $app, $type, $class=''</template_params>
+  <template_content><![CDATA[{{$itemIdField = $item::$databaseColumnId; $idField = $comment::$databaseColumnId;}}
+<div id='comment-{$comment->$idField}_wrap' data-controller='core.front.core.comment' data-commentApp='{$app}' data-commentType='{$type}' data-commentID="{$comment->$idField}" data-quoteData='{expression="json_encode( array('userid' => $comment->author()->member_id, 'username' => $comment->author()->name, 'timestamp' => $comment->mapped('date'), 'contentapp' => $app, 'contenttype' => $type, 'contentclass' => $class, 'contentid' => $item->$itemIdField, 'contentcommentid' => $comment->$idField) )"}' class='cPost_content ipsComment_content ipsType_medium {{if $comment->hidden()}}ipsModerated{{endif}} ipsFaded_withHover'>
+	{{if in_array( 'IPS\Content\Reputation', class_implements( $comment ) ) and settings.reputation_highlight and $comment->reputation() >= settings.reputation_highlight and settings.reputation_enabled}}
+		<strong class='ipsComment_popularFlag' data-ipsTooltip title='{lang="this_is_a_popular_comment"}'><i class='fa fa-heart'></i></strong>
+	{{endif}}
+	
+	<div class='ipsComment_header ipsPhotoPanel ipsPhotoPanel_mini ipsPhotoPanel_notPhone'>
+		{template="userPhoto" app="core" group="global" params="$comment->author(), 'mini', $comment->warningRef()"}
+		<div>
+			<p class='ipsPos_right ipsType_reset ipsType_blendLinks'>
+				<a href='{$comment->item()->url()->setQueryString( array( 'do' => 'findComment', 'comment' => $comment->$idField ) )}' data-ipsTooltip title='{lang="share_this_comment"}' data-ipsMenu data-ipsMenu-closeOnClick='false' id='elShareComment_{$comment->id}' data-role='shareComment'><i class='fa fa-share-alt'></i></a>
+				{{if count( $item->commentMultimodActions() )}}
+				<span class='ipsCustomInput'>
+					<input type="checkbox" name="multimod[{$comment->$idField}]" value="1" data-role="moderation" data-actions="{{if $comment->canSplit()}}split merge{{endif}} {{if $comment->hidden() === -1 AND $comment->canUnhide()}}unhide{{elseif $comment->hidden() === 1 AND $comment->canUnhide()}}approve{{endif}} {{if $comment->hidden() !== -1 AND $comment->canHide()}}hide{{endif}} {{if $comment->canDelete()}}delete{{endif}}" data-state='{{if $comment->tableStates()}}{$comment->tableStates()}{{endif}}'>
+					<span></span>
+				</span>
+				{{endif}}
+			</p>
+			<h3 class='ipsComment_author ipsType_blendLinks'>
+				<strong class='ipsType_normal'>{template="userLink" app="core" group="global" params="$comment->author(), $comment->warningRef()"}</strong>
+				{template="reputationBadge" group="global" app="core" params="$comment->author()"}
+			</h3>
+			<p class='ipsComment_meta ipsType_light ipsType_medium'>
+				<a href='{$comment->item()->url()->setQueryString( array( 'do' => 'findComment', 'comment' => $comment->$idField ) )}' class='ipsType_blendLinks'>{$comment->dateLine()|raw}</a>
+				{{if $comment->editLine()}}
+					({lang="edited_lc"})
+				{{endif}}
+				{{if $comment->hidden()}}
+					&middot; {$comment->hiddenBlurb()}
+				{{endif}}
+				{{if $comment instanceof \IPS\Content\ReportCenter and !\IPS\Member::loggedIn()->group['gbw_no_report'] and $comment->hidden() !== 1 }}
+					&middot; <a href='{$comment->url('report')}' data-ipsDialog data-ipsDialog-remoteSubmit data-ipsDialog-size='medium' data-ipsDialog-flashMessage='{lang="report_submit_success"}' data-ipsDialog-title="{lang="report"}" data-action='reportComment' title='{lang="report_content"}'>{lang="report"}</a>
+				{{endif}}
+			</p>
+
+			{{if member.modPermission('mod_see_warn') and $comment->warning}}
+				{template="commentWarned" group="global" app="core" params="$comment"}
+			{{endif}}
+		</div>
+	</div>
+	<div class='ipsAreaBackground_reset ipsPad'>		
+		<div data-role='commentContent' class='ipsType_normal ipsType_richText ipsType_break ipsContained' data-controller='core.front.core.lightboxedImages'>
+			{{if $comment->hidden() === 1 && $comment->author()->member_id == \IPS\Member::loggedIn()->member_id}}
+				<strong class='ipsType_medium ipsType_warning'><i class='fa fa-info-circle'></i> {lang="comment_awaiting_approval"}</strong>
+			{{endif}}
+			{$comment->content()|raw}
+			
+			{{if $comment->editLine()}}
+				{$comment->editLine()|raw}
+			{{endif}}
+		</div>
+
+		{{if $comment->hidden() !== 1 && $comment instanceof \IPS\Content\Reputation and settings.reputation_enabled}}
+			{template="reputation" group="global" app="core" params="$comment, 'ipsPos_right'"}
+		{{endif}}
+
+		<ul class='ipsComment_controls ipsClearfix' data-role="commentControls">
+			{{if $comment->hidden() === 1 && ( $comment->canUnhide() || $comment->canDelete() )}}
+				{{if $comment->canUnhide()}}
+					<li><a href='{$comment->url('unhide')->csrf()}' class='ipsButton ipsButton_verySmall ipsButton_positive' data-action='approveComment'><i class='fa fa-check'></i> {lang="approve"}</a></li>
+				{{endif}}
+				{{if $comment->canDelete()}}
+					<li><a href='{$comment->url('delete')->csrf()->setQueryString('page',\IPS\Request::i()->page)}' data-confirm data-action='deleteComment' data-updateOnDelete="#commentCount" class='ipsButton ipsButton_verySmall ipsButton_negative'><i class='fa fa-times'></i> {lang="delete"}</a></li>
+				{{endif}}
+				{{if $comment->canEdit() || $comment->canSplit() || $comment->canHide()}}
+					<li>
+						<a href='#elControls_{$comment->$idField}_menu' id='elControls_{$comment->$idField}' data-ipsMenu data-ipsMenu-appendTo='#comment-{$comment->$idField}_wrap'>{lang="options"} &nbsp;<i class='fa fa-caret-down'></i></a>
+						<ul id='elControls_{$comment->$idField}_menu' class='ipsMenu ipsMenu_narrow ipsHide'>
+							{{if $comment->canEdit()}}
+								{{if $comment->mapped('first') and $comment->item()->canEdit()}}
+									<li class='ipsMenu_item'><a href='{$comment->item()->url()->setQueryString( 'do', 'edit' )}'>{lang="edit"}</a></li>
+								{{else}}
+									<li class='ipsMenu_item'><a href='{$comment->url('edit')}' data-action='editComment'>{lang="edit"}</a></li>
+								{{endif}}
+							{{endif}}
+							{{if $comment->canSplit()}}
+								<li class='ipsMenu_item'><a href='{$comment->url('split')}' data-action='splitComment' data-ipsDialog data-ipsDialog-title="{lang="split_to_new" sprintf="\IPS\Member::loggedIn()->language()->addToStack( $item::$title )"}">{lang="split"}</a></li>
+							{{endif}}
+							{{if $comment instanceof \IPS\Content\Hideable and $comment->canHide()}}
+								<li class='ipsMenu_item'><a href='{$comment->url('hide')->csrf()}' data-ipsDialog data-ipsDialog-title="{lang="hide"}">{lang="hide"}</a></li>
+							{{endif}}
+						</ul>
+					</li>
+				{{endif}}
+			{{else}}
+				{{if $comment->hidden() === 0 and $item->canComment() and $editorName}}
+					<li data-ipsQuote-editor='{$editorName}' data-ipsQuote-target='#comment-{$comment->$idField}' class='ipsJS_show'>
+						<button class='ipsButton ipsButton_light ipsButton_verySmall ipsButton_narrow cMultiQuote ipsHide' data-action='multiQuoteComment' data-ipsTooltip data-ipsQuote-multiQuote data-mqId='mq{$comment->$idField}' title='{lang="multiquote"}'><i class='fa fa-plus'></i></button>
+					</li>
+					<li data-ipsQuote-editor='{$editorName}' data-ipsQuote-target='#comment-{$comment->$idField}' class='ipsJS_show'>
+						<a href='#' data-action="quoteComment" data-ipsQuote-singleQuote>{lang="quote"}</a>
+					</li>
+				{{endif}}
+				{{if $comment->canEdit()}}
+					{{if $comment->mapped('first') and $comment->item()->canEdit()}}
+						<li><a href='{$comment->item()->url()->setQueryString( 'do', 'edit' )}'>{lang="edit"}</a></li>
+					{{else}}
+						<li><a href='{$comment->url('edit')}' data-action='editComment'>{lang="edit"}</a></li>
+					{{endif}}
+				{{endif}}
+				{{if $comment->canDelete() || $comment->canSplit() || ( $comment instanceof \IPS\Content\Hideable AND ( ( !$comment->hidden() and $comment->canHide() ) || ( $comment->hidden() and $comment->canUnhide() ) ) )}}
+					<li>
+						<a href='#elControls_{$comment->$idField}_menu' id='elControls_{$comment->$idField}' data-ipsMenu data-ipsMenu-appendTo='#comment-{$comment->$idField}_wrap'>{lang="options"} &nbsp;<i class='fa fa-caret-down'></i></a>
+						<ul id='elControls_{$comment->$idField}_menu' class='ipsMenu ipsMenu_narrow ipsHide'>
+							{{if $comment instanceof \IPS\Content\Hideable}}
+								{{if !$comment->hidden() and $comment->canHide()}}
+									<li class='ipsMenu_item'><a href='{$comment->url('hide')->csrf()}' data-ipsDialog data-ipsDialog-title="{lang="hide"}">{lang="hide"}</a></li>
+								{{elseif $comment->hidden() and $comment->canUnhide()}}
+									<li class='ipsMenu_item'><a href='{$comment->url('unhide')->csrf()}'>{lang="unhide"}</a></li>
+								{{endif}}
+							{{endif}}
+							{{if $comment->canSplit()}}
+								<li class='ipsMenu_item'><a href='{$comment->url('split')}' data-action='splitComment' data-ipsDialog data-ipsDialog-title="{lang="split_to_new" sprintf="\IPS\Member::loggedIn()->language()->addToStack( $item::$title )"}">{lang="split"}</a></li>
+							{{endif}}
+							{{if $comment->canDelete()}}
+								<li class='ipsMenu_item'><a href='{$comment->url('delete')->csrf()->setQueryString('page',\IPS\Request::i()->page)}' data-action='deleteComment' data-updateOnDelete="#commentCount">{lang="delete"}</a></li>
+							{{endif}}
+						</ul>
+					</li>
+				{{endif}}
+			{{endif}}
+			<li class='ipsHide' data-role='commentLoading'>
+				<span class='ipsLoading ipsLoading_tiny ipsLoading_noAnim'></span>
+			</li>
+		</ul>
+	</div>
+	<div class='ipsMenu ipsMenu_wide ipsHide cPostShareMenu' id='elShareComment_{$comment->id}_menu'>
+		<div class='ipsPad'>
+			<h4 class='ipsType_sectionHead'>{lang="share_this_comment"}</h4>
+			<hr class='ipsHr'>
+			<h5 class='ipsType_normal ipsType_reset'>{lang="link_to_comment"}</h5>
+			<input type='text' value='{$comment->item()->url()->setQueryString( array( 'do' => 'findComment', 'comment' => $comment->$idField ) )}' class='ipsField_fullWidth'>
+			{{if !$comment->item()->container()->disable_sharelinks}}
+			<h5 class='ipsType_normal ipsType_reset ipsSpacer_top'>{lang="share_externally"}</h5>
+			{template="sharelinks" group="global" app="core" params="$comment"}
+			{{endif}}
+		</div>
+	</div>
+</div>]]></template_content>
+ </template>
+ <template template_title="commentContainer" template_group="releasenotes" template_location="database" template_original_group="display">
+  <template_params>$item, $comment, $votes=array(), $otherClasses=''</template_params>
+  <template_content><![CDATA[{{$idField = $comment::$databaseColumnId;}}
+{{$itemClassSafe = str_replace( '\\', '_', mb_substr( $comment::$itemClass, 4 ) );}}
+{{if $comment->isIgnored()}}
+	<div class='ipsComment ipsComment_ignored ipsPad_half ipsType_light' id='elIgnoreComment_{$comment->$idField}' data-ignoreCommentID='elComment_{$comment->$idField}' data-ignoreUserID='{$comment->author()->member_id}'>
+		{lang="ignoring_content" sprintf="$comment->author()->name"} <a href='#elIgnoreComment_{$comment->$idField}_menu' data-ipsMenu data-ipsMenu-menuID='elIgnoreComment_{$comment->$idField}_menu' data-ipsMenu-appendTo='#elIgnoreComment_{$comment->$idField}' data-action="ignoreOptions" title='{lang="see_post_ignore_options"}' class='ipsType_blendLinks'>{lang="options"} <i class='fa fa-caret-down'></i></a>
+		<ul class='ipsMenu ipsHide' id='elIgnoreComment_{$comment->$idField}_menu'>
+			<li class='ipsMenu_item' data-ipsMenuValue='showPost'><a href='#'>{lang="show_this_comment"}</a></li>
+			<li class='ipsMenu_sep'><hr></li>
+			<li class='ipsMenu_item' data-ipsMenuValue='stopIgnoring'><a href='{url="app=core&module=system&controller=ignore&do=remove&id={$comment->author()->member_id}" seoTemplate="ignore"}'>{lang="stop_ignoring_posts_by" sprintf="$comment->author()->name"}</a></li>
+			<li class='ipsMenu_item'><a href='{url="app=core&module=system&controller=ignore" seoTemplate="ignore"}'>{lang="change_ignore_preferences"}</a></li>
+		</ul>
+	</div>
+{{endif}}
+
+<a id='comment-{$comment->$idField}'></a>
+<article {{if $comment->author()->hasHighlightedReplies()}}data-memberGroup="{$comment->author()->member_group_id}" {{endif}} itemscope itemtype="http://schema.org/Comment" id='elComment_{$comment->$idField}' class='ipsComment {{if $otherClasses}}{$otherClasses}{{endif}} {{if in_array( 'IPS\Content\Reputation', class_implements( $comment ) ) and settings.reputation_highlight and $comment->reputation() >= settings.reputation_highlight and settings.reputation_enabled}}ipsComment_popular{{endif}} ipsComment_parent ipsClearfix ipsClear {{if $comment->author()->hasHighlightedReplies()}}ipsComment_highlighted{{endif}} {{if $comment->isIgnored()}}ipsHide{{endif}} {{if $comment->hidden()}}ipsModerated{{endif}}'>
+	{template="comment" app="cms" location="database" group="releasenotes" params="$item, $comment, $item::$formLangPrefix . 'comment', $item::$application, $item::$module, $itemClassSafe"}
+</article>]]></template_content>
+ </template>
+ <template template_title="comments" template_group="releasenotes" template_location="database" template_original_group="display">
+  <template_params>$record</template_params>
+  <template_content><![CDATA[<div data-controller='core.front.core.commentFeed, core.front.core.ignoredComments' {{if settings.auto_polling_enabled}}data-autoPoll{{endif}} data-commentsType='comments' data-baseURL='{$record->url()}' {{if $record->isLastPage()}}data-lastPage{{endif}} data-feedID='records{$record::$customDatabaseId}-{$record->_id}' id='comments'>
+	<br>
+	{{if $record->commentPageCount() > 1}}
+		{$record->commentPagination( array( 'tab' ) )|raw}
+		<br><br>
+	{{endif}}
+	<div data-role='commentFeed' data-controller='core.front.core.moderation'>
+		{{if count( $record->comments() )}}
+			<form action="{$record->url()->csrf()->setQueryString( 'do', 'multimodComment' )}" method="post" data-ipsPageAction data-role='moderationTools'>
+				{{$commentCount=0; $timeLastRead = $record->timeLastRead(); $lined = FALSE;}}
+				{{foreach $record->comments() as $comment}}
+					{{if !$lined and $timeLastRead and $timeLastRead->getTimestamp() < $comment->mapped('date')}}
+						{{if $lined = TRUE and $commentCount}}
+							<hr class="ipsCommentUnreadSeperator">
+						{{endif}}
+					{{endif}}
+					{{$commentCount++;}}
+					{$comment->html()|raw}
+				{{endforeach}}
+				{template="commentMultimod" app="core" group="global" params="$record"}
+			</form>
+		{{else}}
+			<p class='ipsType_normal ipsType_light ipsType_reset' data-role='noComments'>{lang="no_comments"}</p>
+		{{endif}}
+	</div>
+	{{if $record->commentPageCount() > 1}}
+		<hr class='ipsHr'>
+		{$record->commentPagination( array( 'tab' ) )|raw}
+	{{endif}}
+	{{if $record->commentForm() || $record->locked() || \IPS\Member::loggedin()->restrict_post || \IPS\Member::loggedIn()->members_bitoptions['unacknowledged_warnings']}}
+		<br><br>
+		<div class='ipsAreaBackground ipsPad' data-role='replyArea'>
+			{{if $record->commentForm()}}
+				{{if $record->locked()}}
+					<p class='ipsType_reset ipsType_warning ipsComposeArea_warning ipsSpacer_bottom ipsSpacer_half'><i class='fa fa-info-circle'></i> {lang="cms_locked_can_comment" sprintf="$record::database()->recordWord(1)"}</p>
+				{{endif}}
+				{$record->commentForm()|raw}
+			{{else}}
+				{{if $record->locked()}}
+					{template="commentUnavailable" group="forms" location="front" app="core" params="'record_locked_cannot_comment'"}
+				{{elseif \IPS\Member::loggedin()->restrict_post}}
+					{template="commentUnavailable" group="forms" location="front" app="core" params="'restricted_cannot_comment', \IPS\Member::loggedIn()->warnings(5,NULL,'rpa'), \IPS\Member::loggedIn()->restrict_post"}
+				{{elseif \IPS\Member::loggedIn()->members_bitoptions['unacknowledged_warnings']}}
+					{template="commentUnavailable" group="forms" location="front" app="core" params="'unacknowledged_warning_cannot_post', \IPS\Member::loggedIn()->warnings( 1, FALSE )"}
+				{{endif}}
+			{{endif}}
+		</div>
+	{{endif}}
+</div>]]></template_content>
+ </template>
+ <template template_title="commentsAndReviewsTabs" template_group="releasenotes" template_location="database" template_original_group="display">
+  <template_params>$content, $id</template_params>
+  <template_content><![CDATA[<div data-controller='core.front.core.commentsWrapper' data-tabsId='{$id}'>
+	{$content|raw}
+</div>]]></template_content>
+ </template>
+ <template template_title="filterMessage" template_group="releasenotes" template_location="database" template_original_group="listing">
+  <template_params>$activeFilters, $category</template_params>
+  <template_content><![CDATA[<div class='ipsMessage ipsMessage_general'>
+	<a href='{$category->url()->csrf()->setQueryString( array( "do" => "clearFilters", 'd' => \IPS\cms\Databases\Dispatcher::i()->databaseId ) )}' class='ipsPos_right ipsButton ipsButton_veryLight ipsButton_verySmall'>{lang="cms_database_filtered_clear"}</a>
+	{lang="cms_database_filtered_by"}
+	{{foreach $activeFilters as $id => $data}}
+		{$data['field']->_title} ({$data['value']})
+	{{endforeach}}
+</div>]]></template_content>
+ </template>
+ <template template_title="filtersAddComment" template_group="releasenotes" template_location="database" template_original_group="display">
+  <template_params>$rows</template_params>
+  <template_content><![CDATA[<div>
+	{{foreach $rows as $line}}
+		<p>{$line|raw}</p>
+	{{endforeach}}
+</div>]]></template_content>
+ </template>
+ <template template_title="record" template_group="releasenotes" template_location="database" template_original_group="display">
+  <template_params>$record, $commentsAndReviews, $updateForm=NULL, $nextUnread=NULL</template_params>
+  <template_content><![CDATA[
+<div class='ipsClearfix'>
+      <h1 class='ipsType_pageTitle ipsType_largeTitle ipsType_break'>
+          IPS Community Suite {wordbreak="$record->_title"}
+
+          {{if $record->isFutureDate() || $record->mapped('pinned') || $record->mapped('featured') || $record->hidden() === -1 || $record->hidden() === 1}}
+              {{if $record->isFutureDate()}}
+                  <span class="ipsBadge ipsBadge_icon ipsBadge_warning" data-ipsTooltip title='{$record->futureDateBlurb()}'><i class='fa fa-clock-o'></i></span>
+              {{elseif $record->hidden() === -1}}
+                  <span class="ipsBadge ipsBadge_icon ipsBadge_warning" data-ipsTooltip title='{$record->hiddenBlurb()}'><i class='fa fa-eye-slash'></i></span>
+              {{elseif $record->hidden() === 1}}
+                  <span class="ipsBadge ipsBadge_icon ipsBadge_warning" data-ipsTooltip title='{lang="pending_approval"}'><i class='fa fa-warning'></i></span>
+              {{endif}}
+              {{if $record->mapped('pinned')}}
+                  <span class="ipsBadge ipsBadge_icon ipsBadge_positive" data-ipsTooltip title='{lang="pinned"}'><i class='fa fa-thumb-tack'></i></span>
+              {{endif}}
+              {{if $record->mapped('featured')}}
+                  <span class="ipsBadge ipsBadge_icon ipsBadge_positive" data-ipsTooltip title='{lang="featured"}'><i class='fa fa-star'></i></span>
+              {{endif}}
+          {{endif}}
+      </h1>
+      <p class='ipsType_reset ipsType_large'>{$record->customFieldDisplayByKey('release-date', 'display')|raw}</p>
+
+      {$record->customFieldDisplayByKey('security-release', 'display')|raw}
+</div>
+
+<hr class='ipsHr'>
+
+{{if count( $record->tags() )}}		
+	{template="tags" group="global" app="core" params="$record->tags()"}
+{{endif}}	
+
+<article class='ipsContained ipsSpacer_top'>
+	<div class='ipsClearfix'>
+		<section class="ipsType_richText ipsType_normal" data-controller='core.front.core.lightboxedImages'>
+			<h2 class='ipsType_pageTitle'>Key Changes</h2>
+			{$record->_content|raw}
+		</section>
+
+		{{if $record->fieldValues()['field_164']}}
+			<section class="ipsSpacer_top ipsSpacer_double ipsType_richText ipsType_normal" data-controller='core.front.core.lightboxedImages'>
+				<h2 class='ipsType_pageTitle'>Additional Information</h2>
+				{$record->customFieldDisplayByKey('additional-information', 'display')|raw}
+			</section>	
+		{{endif}}	
+	</div>
+		
+	<hr class='ipsHr ipsClear ipsClearfix'>
+
+	{{if $record->isFutureDate() or $record->canPin() or $record->canUnpin() or $record->canFeature() or $record->canUnfeature() or $record->canHide() or $record->canUnhide() or $record->canMove() or $record->canLock() or $record->canUnlock() or $record->canDelete()}}
+		<a href='#elentryActions_menu' id='elentryActions' class='ipsButton ipsButton_light ipsButton_verySmall' data-ipsMenu>{lang="content_record_actions" sprintf="$record::database()->recordWord( 1, TRUE )"} <i class='fa fa-caret-down'></i></a>
+		<ul id='elentryActions_menu' class='ipsMenu ipsMenu_auto ipsHide'>
+			{{if $record->isFutureDate() and $record::canFuturePublish( NULL, $record->container() )}}
+				<li class='ipsMenu_item'><a href='{$record->url('moderate')->csrf()->setQueryString( array( 'action' => 'publish' ) )}' data-confirm title='{lang="publish_now"}'>{lang="publish"}</a></li>
+			{{endif}}
+			{{if $record->canFeature()}}
+				<li class='ipsMenu_item'><a href='{$record->url('moderate')->csrf()->setQueryString( array( 'action' => 'feature' ) )}' title='{lang="feature_title_record" sprintf="$record::database()->recordWord(1)"}'>{lang="feature"}</a></li>
+			{{endif}}
+			{{if $record->canUnfeature()}}				
+				<li class='ipsMenu_item'><a href='{$record->url('moderate')->csrf()->setQueryString( array( 'action' => 'unfeature' ) )}' title='{lang="unfeature_title_record" sprintf="$record::database()->recordWord(1)"}'>{lang="unfeature"}</a></li>
+			{{endif}}
+			{{if $record->canPin()}}				
+				<li class='ipsMenu_item'><a href='{$record->url('moderate')->csrf()->setQueryString( array( 'action' => 'pin' ) )}' title='{lang="pin_title_record" sprintf="$record::database()->recordWord(1)"}'>{lang="pin"}</a></li>
+			{{endif}}
+			{{if $record->canUnpin()}}				
+				<li class='ipsMenu_item'><a href='{$record->url('moderate')->csrf()->setQueryString( array( 'action' => 'unpin' ) )}' title='{lang="unpin_title_record" sprintf="$record::database()->recordWord(1)"}'>{lang="unpin"}</a></li>
+			{{endif}}
+			{{if $record->canHide()}}				
+				<li class='ipsMenu_item'><a href='{$record->url('moderate')->csrf()->setQueryString( array( 'action' => 'hide' ) )}' title='{lang="hide_title_record" sprintf="$record::database()->recordWord(1)"}' data-ipsDialog data-ipsDialog-title="{lang="hide"}">{lang="hide"}</a></li>
+			{{endif}}
+			{{if $record->canUnhide()}}				
+				<li class='ipsMenu_item'><a href='{$record->url('moderate')->csrf()->setQueryString( array( 'action' => 'unhide' ) )}' title='{{if $record->hidden() === 1}}{lang="approve_title_record" sprintf="$record::database()->recordWord(1)"}{{else}}{lang="unhide_title_record" sprintf="$record::database()->recordWord(1)"}{{endif}}'>{{if $record->hidden() === 1}}{lang="approve"}{{else}}{lang="unhide"}{{endif}}</a></li>
+			{{endif}}
+			{{if $record->canLock()}}				
+				<li class='ipsMenu_item'><a href='{$record->url('moderate')->csrf()->setQueryString( array( 'action' => 'lock' ) )}' title='{lang="lock_title_record" sprintf="$record::database()->recordWord(1)"}'>{lang="lock"}</a></li>
+			{{endif}}
+			{{if $record->canUnlock()}}				
+				<li class='ipsMenu_item'><a href='{$record->url('moderate')->csrf()->setQueryString( array( 'action' => 'unlock' ) )}' title='{lang="unlock_title_record" sprintf="$record::database()->recordWord(1)"}'>{lang="unlock"}</a></li>
+			{{endif}}
+			{{if $record->canMove()}}				
+				<li class='ipsMenu_item'><a href='{$record->url('move')->csrf()}' data-ipsDialog data-ipsDialog-title="{lang="move"}"  title='{lang="move_title_record" sprintf="$record::database()->recordWord(1)"}'>{lang="move"}</a></li>
+			{{endif}}
+			{{if $record->canDelete()}}				
+				<li class='ipsMenu_item'><a href='{$record->url('moderate')->csrf()->setQueryString( array( 'action' => 'delete' ) )}' data-confirm  title='{lang="delete_title_record" sprintf="$record::database()->recordWord(1)"}'>{lang="delete"}</a></li>
+			{{endif}}
+		</ul>
+	{{endif}}
+	{{if $record->canEdit()}}
+		  <a href='{$record->url('edit')->csrf()}' title='{lang="edit_title"}'>{lang="edit"}</a>
+	{{endif}}
+	{{if $record->canManageRevisions()}}
+		  <a href='{$record->url('revisions')}' title="{lang="content_view_revisions"}">{lang="content_view_revisions"}</a>
+	{{endif}}
+</article>
+
+<br>
+{{if $updateForm}}
+	<div class='ipsAreaBackground_light ipsPad'>
+		<h2 class='ipsType_sectionHead'>{lang="cms_front_update_fields" sprintf="$record::database()->recordWord( 1 )"}</h2>
+		<ul class='ipsForm ipsForm_vertical'>
+			{$updateForm|raw}
+		</ul>
+	</div>
+{{endif}}]]></template_content>
+ </template>
+ <template template_title="recordEditLine" template_group="releasenotes" template_location="database" template_original_group="display">
+  <template_params>$record</template_params>
+  <template_content><![CDATA[
+<p class='ipsType_reset ipsType_medium ipsType_light' data-excludequote>
+	<strong>{lang="date_edited" htmlsprintf="\IPS\DateTime::ts( $record->record_edit_time )->html(FALSE), htmlspecialchars( $record->record_edit_member_name, ENT_QUOTES | \IPS\HTMLENTITIES, 'UTF-8', FALSE )"}</strong>
+	{{if $record->edit_reason}}
+		<br>{$record->edit_reason}
+	{{endif}}
+	{{if $record->database()->revisions and \IPS\Settings::i()->edit_log == 2 and ( \IPS\Settings::i()->edit_log_public or \IPS\Member::loggedIn()->modPermission('can_view_editlog') )}}
+		<a href='{$record->url('revisions')}' data-ipsDialog data-ipsDialog-title="{lang="content_view_revisions"}" title="{lang="content_edit_view_revisions"}">{lang="content_edit_view_revisions"}</a>
+		{{if !$record->record_edit_show AND \IPS\Member::loggedIn()->modPermission('can_view_editlog')}}
+		<br>{lang="comment_edit_show_anyways"}
+		{{endif}}
+	{{endif}}
+</p>]]></template_content>
+ </template>
+ <template template_title="recordRow" template_group="releasenotes" template_location="database" template_original_group="listing">
+  <template_params>$table, $headers, $rows</template_params>
+  <template_content><![CDATA[
+{{$rowIds = array();}}
+{{foreach $rows as $row}}
+	{{$idField = $row::$databaseColumnId;}}
+	{{$rowIds[] = $row->$idField;}}
+{{endforeach}}
+{{$iposted = ( $table AND method_exists( $table, 'container' ) AND $table->container() !== NULL ) ? $table->container()->contentPostedIn( null, $rowIds ) : array();}}
+
+{{foreach $rows as $row}}
+	{{$idField = $row::$databaseColumnId;}}
+	<li class="cCmsRecord_row {{if $row->hidden()}}ipsModerated{{endif}}" data-rowID='{$row->$idField}'>
+		<a href='{$row->url()}' class='cRelease' data-releaseID='{$row->$idField}' {{if $row->fieldValues()['field_8']}}data-currentRelease{{endif}}>
+			{$row->customFieldDisplayByKey('security-release', 'listing')|raw}
+			<h3 class='ipsType_sectionHead ipsType_break'>
+				{{if $row->_title}}{$row->_title}{{else}}<em class="ipsType_light">{lang="content_deleted"}</em>{{endif}}
+				{$row->customFieldDisplayByKey('current-release', 'listing')|raw}
+              	{$row->customFieldDisplayByKey('beta-release', 'listing')|raw}
+			</h3>
+			{{if $row->isFutureDate() || $row->mapped('pinned') || $row->mapped('featured') || $row->hidden() === -1 || $row->hidden() === 1}}
+				<span>
+					{{if $row->isFutureDate()}}
+						<span class="ipsBadge ipsBadge_icon ipsBadge_small ipsBadge_warning" data-ipsTooltip title='{$row->futureDateBlurb()}'><i class='fa fa-clock-o'></i></span>
+					{{elseif $row->hidden() === -1}}
+						<span class="ipsBadge ipsBadge_icon ipsBadge_small ipsBadge_warning" data-ipsTooltip title='{$row->hiddenBlurb()}'><i class='fa fa-eye-slash'></i></span>
+					{{elseif $row->hidden() === 1}}
+						<span class="ipsBadge ipsBadge_icon ipsBadge_small ipsBadge_warning" data-ipsTooltip title='{lang="pending_approval"}'><i class='fa fa-warning'></i></span>
+					{{endif}}							
+					{{if $row->mapped('pinned')}}
+						<span class="ipsBadge ipsBadge_icon ipsBadge_small ipsBadge_positive" data-ipsTooltip title='{lang="pinned"}'><i class='fa fa-thumb-tack'></i></span>
+					{{endif}}
+					{{if $row->mapped('featured')}}
+						<span class="ipsBadge ipsBadge_icon ipsBadge_small ipsBadge_positive" data-ipsTooltip title='{lang="featured"}'><i class='fa fa-star'></i></span>
+					{{endif}}
+				</span>
+			{{endif}}
+			{{if count( $row->customFieldsForDisplay('listing') )}}
+				<div class='ipsDataItem_meta'>
+				{{foreach $row->customFieldsForDisplay('listing') as $fieldId => $fieldValue}}
+					{{if $fieldValue && $fieldId != 'current-release' && $fieldId != 'beta-release' && $fieldId != 'security-release'}}
+						{$fieldValue|raw}
+					{{endif}}
+				{{endforeach}}
+				</div>
+			{{endif}}
+		</a>
+	</li>
+{{endforeach}}]]></template_content>
+ </template>
+ <template template_title="review" template_group="releasenotes" template_location="database" template_original_group="display">
+  <template_params>$item, $review, $editorName, $app, $type</template_params>
+  <template_content><![CDATA[<div id='review-{$review->id}_wrap' data-controller='core.front.core.comment' data-commentApp='{$app}' data-commentType='{$type}-review' data-commentID="{$review->id}" data-quoteData='{expression="json_encode( array('userid' => $review->author()->member_id, 'username' => $review->author()->name, 'timestamp' => $review->mapped('date'), 'contentapp' => $app, 'contenttype' => $type, 'contentid' => $item->id, 'contentcommentid' => $review->id) )"}' class='ipsComment_content ipsType_medium' itemprop='review' itemscope itemtype="http://schema.org/Review">
+	<div class='ipsComment_header ipsPhotoPanel ipsPhotoPanel_small ipsPhotoPanel_notPhone'>
+		{template="userPhoto" app="core" group="global" params="$review->author(), 'small', $review->warningRef(), 'ipsPos_left'"}
+		<div>
+			<p class='ipsPos_right ipsType_reset ipsType_blendLinks'>
+				<a href='{$review->item()->url()->setQueryString( array( 'do' => 'findReview', 'review' => $review->id ) )}' data-ipsTooltip title='{lang="share_this_review"}' data-ipsMenu data-ipsMenu-closeOnClick='false' id='elShareComment_{$review->id}' data-role='shareComment'><i class='fa fa-share-alt'></i></a>
+				{{if count( $item->reviewMultimodActions() )}}
+					<span class='ipsCustomInput'>
+						<input type="checkbox" name="multimod[{$review->id}]" value="1" data-role="moderation" data-actions="{{if $review->hidden() === -1 AND $review->canUnhide()}}unhide{{elseif $review->hidden() === 1 AND $review->canUnhide()}}approve{{elseif $review->canHide()}}hide{{endif}} {{if $review->canDelete()}}delete{{endif}}" data-state='{{if $review->tableStates()}}{$review->tableStates()}{{endif}}'>
+						<span></span>
+					</span>
+				{{endif}}
+			</p>
+			<h3 class="ipsComment_author ipsType_blendLinks">
+				<strong class='ipsType_normal' itemprop='author'>{template="userLink" app="core" group="global" params="$review->author(), $review->warningRef()"}</strong>
+				{template="reputationBadge" group="global" app="core" params="$review->author()"}
+			</h3>
+			<p class="ipsComment_meta ipsType_medium ipsType_light">
+				<meta itemprop='datePublished' content='{expression="\IPS\DateTime::ts( $review->mapped('date') )->format( 'Y-m-d' )"}'>{datetime="$review->mapped('date')"}
+				{{if $review->editLine()}}
+					&middot; {$review->editLine()|raw}
+				{{endif}}
+				{{if $review->hidden()}}
+					&middot; {$review->hiddenBlurb()}
+				{{endif}}
+				{{if $review->hidden() !== 1 and $review instanceof \IPS\Content\ReportCenter and !\IPS\Member::loggedIn()->group['gbw_no_report'] }}
+					&middot; <a href='{$review->url('report')}' data-ipsDialog data-ipsDialog-remoteSubmit data-ipsDialog-size='medium' data-ipsDialog-flashMessage='{lang="report_submit_success"}' data-ipsDialog-title="{lang="report"}" data-action='reportComment' title='{lang="report"}'>{lang="report"}</a>
+				{{endif}}
+			</p>
+			<ul class='ipsList_inline ipsClearfix ipsRating ipsRating_large' itemprop='reviewRating' itemscope itemtype='http://schema.org/Rating'>
+				<meta itemprop='worstRating' content='1'>
+				<meta itemprop='bestRating' content='{expression="intval( \IPS\Settings::i()->reviews_rating_out_of )"}'>
+				{{foreach range( 1, intval( \IPS\Settings::i()->reviews_rating_out_of ) ) as $i}}
+					<li class='{{if $review->mapped('rating') >= $i}}ipsRating_on{{else}}ipsRating_off{{endif}}'>
+						{{if $review->mapped('rating') === $i}}<span itemprop='ratingValue' class='ipsHide'>{$i}</span>{{endif}}
+						<i class='fa fa-star'></i>
+					</li>
+				{{endforeach}}
+			</ul>&nbsp;&nbsp; {{if $review->mapped('votes_total')}}<strong class='ipsType_medium'>{$review->helpfulLine()|raw}</strong><br>{{endif}}
+		</div>
+	</div>
+	<div class='ipsPad'>
+		<div id="review-{$review->id}" data-role="commentContent" class="ipsType_richText ipsType_normal ipsType_break ipsContained" itemprop="reviewBody" data-controller='core.front.core.lightboxedImages'>
+			{$review->content()|raw}
+		</div>
+
+		{{if $review->hidden() !== 1}}
+			{{if member.member_id and ( !$review->mapped('votes_data') or !array_key_exists( member.member_id, json_decode( $review->mapped('votes_data'), TRUE ) ) ) and $review->author()->member_id != \IPS\Member::loggedIn()->member_id}}
+				<span class='ipsType_medium'><strong>{lang="did_you_find_this_helpful"}</strong> &nbsp;&nbsp;&nbsp;<a href='{$review->url('rate')->setQueryString( 'helpful', TRUE )->csrf()}' class='ipsButton ipsButton_verySmall ipsButton_light' data-action="rateReview"><i class='fa fa-check'></i> {lang="yes"}</a> <a href='{$review->url('rate')->setQueryString( 'helpful', FALSE )->csrf()}' class='ipsButton ipsButton_verySmall ipsButton_light' data-action="rateReview"><i class='fa fa-times'></i> {lang="no"}</a></span>
+				<br class='ipsClear'>
+			{{endif}}
+			
+			{{if $review instanceof \IPS\Content\Reputation and settings.reputation_enabled}}
+				{template="reputation" group="global" app="core" params="$review, 'ipsPos_right ipsResponsive_noFloat'"}
+			{{endif}}
+		{{endif}}
+
+		{{if ( member.member_id and ( !$review->mapped('votes_data') or !array_key_exists( member.member_id, json_decode( $review->mapped('votes_data'), TRUE ) ) ) ) || $review->canEdit() || $review->canDelete() || $review->canHide() || $review->canUnhide()}}
+			{{if $review->canEdit() || $review->canDelete() || $review->canHide() || $review->canUnhide()}}
+				<ul class='ipsComment_controls ipsClearfix' data-role="commentControls">
+					{{if $review->hidden() === 1 && ( $review->canUnhide() || $review->canDelete() )}}
+						{{if $review->canUnhide()}}
+							<li><a href='{$review->url('unhide')->csrf()}' class='ipsButton ipsButton_verySmall ipsButton_positive' data-action='approve'><i class='fa fa-check'></i> {lang="approve"}</a></li>
+						{{endif}}
+						{{if $review->canDelete()}}
+							<li><a href='{$review->url('delete')->csrf()->setQueryString('page',\IPS\Request::i()->page)}' data-confirm data-action='deleteComment' data-updateOnDelete="#commentCount" class='ipsButton ipsButton_verySmall ipsButton_negative'><i class='fa fa-times'></i> {lang="delete"}</a></li>
+						{{endif}}
+						{{if $review->canEdit() || $review->canSplit()}}
+							<li>
+								<a href='#elControls_{$review->id}_menu' id='elControls_{$review->id}' data-ipsMenu data-ipsMenu-appendTo='#review-{$review->id}_wrap'>{lang="options"} &nbsp;<i class='fa fa-caret-down'></i></a>
+								<ul id='elControls_{$review->id}_menu' class='ipsMenu ipsMenu_narrow ipsHide'>
+									{{if $review->canEdit()}}
+										{{if $review->mapped('first') and $review->item()->canEdit()}}
+											<li class='ipsMenu_item'><a href='{$review->item()->url()->setQueryString( 'do', 'edit' )}'>{lang="edit"}</a></li>
+										{{else}}
+											<li class='ipsMenu_item'><a href='{$review->url('edit')}' data-action='editComment'>{lang="edit"}</a></li>
+										{{endif}}
+									{{endif}}
+									{{if $review->canSplit()}}
+										<li class='ipsMenu_item'><a href='{$review->url('split')}' data-action='splitComment' data-ipsDialog data-ipsDialog-title="{lang="split_to_new" sprintf="\IPS\Member::loggedIn()->language()->addToStack( $item::$title )"}">{lang="split"}</a></li>
+									{{endif}}
+								</ul>
+							</li>
+						{{endif}}
+					{{else}}
+						{{if $review->canEdit()}}
+							<li><a href='{$review->url('edit')}' data-action='editComment'>{lang="edit"}</a></li>
+						{{endif}}	
+						{{if $review->canDelete() || $review->canHide() || $review->canUnhide()}}
+							<li>
+								<a href='#elControls_review{$review->id}_menu' id='elControls_review{$review->id}' data-ipsMenu data-ipsMenu-appendTo='#review-{$review->id}_wrap'>{lang="options"} &nbsp;<i class='fa fa-caret-down'></i></a>
+								<ul id='elControls_review{$review->id}_menu' class='ipsMenu ipsMenu_narrow ipsHide'>
+									{{if $review instanceof \IPS\Content\Hideable}}
+										{{if !$review->hidden() and $review->canHide()}}
+											<li class='ipsMenu_item'><a href='{$review->url('hide')->csrf()}' data-ipsDialog data-ipsDialog-title="{lang="hide"}">{lang="hide"}</a></li>
+										{{elseif $review->hidden() and $review->canUnhide()}}
+											<li class='ipsMenu_item'><a href='{$review->url('unhide')->csrf()}'>{lang="unhide"}</a></li>
+										{{endif}}
+									{{endif}}
+									{{if $review->canDelete()}}
+										<li class='ipsMenu_item'><a href='{$review->url('delete')->csrf()->setQueryString('page',\IPS\Request::i()->page)}' data-confirm data-action='deleteComment' data-updateOnDelete="#reviewCount">{lang="delete"}</a></li>
+									{{endif}}
+								</ul>
+							</li>
+						{{endif}}
+					{{endif}}
+					<li class='ipsHide' data-role='commentLoading'>
+						<span class='ipsLoading ipsLoading_tiny ipsLoading_noAnim'></span>
+					</li>
+				</ul>
+			{{endif}}
+		{{endif}}
+	</div>
+	
+	<div class='ipsMenu ipsMenu_wide ipsHide cPostShareMenu' id='elShareComment_{$review->id}_menu'>
+		<div class='ipsPad'>
+			<h4 class='ipsType_sectionHead'>{lang="share_this_review"}</h4>
+			<hr class='ipsHr'>
+			<h5 class='ipsType_normal ipsType_reset'>{lang="link_to_review"}</h5>
+			<input type='text' value='{$review->item()->url()->setQueryString( array( 'do' => 'findReview', 'review' => $review->id ) )}' class='ipsField_fullWidth'>
+		</div>
+	</div>
+</div>]]></template_content>
+ </template>
+ <template template_title="reviewContainer" template_group="releasenotes" template_location="database" template_original_group="display">
+  <template_params>$item, $review</template_params>
+  <template_content><![CDATA[{{if $review->isIgnored()}}
+	<div class='ipsComment ipsComment_ignored ipsPad_half ipsType_light'>
+		{lang="ignoring_content" sprintf="$review->author()->name"}
+	</div>
+{{else}}
+	<article itemscope="" itemtype="http://schema.org/Comment" id="elComment_115" class="ipsComment ipsComment_parent ipsClearfix ipsClear {{if $review->hidden()}}ipsModerated{{endif}}">
+		{{if !$item->printedAverageReviewRating}}
+			<div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+				<meta itemprop="ratingValue" content="{$item->averageReviewRating()}">
+				<meta itemprop="reviewCount" content="{$item->reviewCount()}">
+			</div>
+			{{$item->printedAverageReviewRating = true;}}
+		{{endif}}
+		<a id="review-{$review->id}"></a>
+		{template="review" app="cms" location="database" group="releasenotes" params="$item, $review, $item::$formLangPrefix . 'review', $item::$application, $item::$module"}
+	</article>
+{{endif}}]]></template_content>
+ </template>
+ <template template_title="reviews" template_group="releasenotes" template_location="database" template_original_group="display">
+  <template_params>$record</template_params>
+  <template_content><![CDATA[<div data-controller='core.front.core.commentFeed' {{if settings.auto_polling_enabled}}data-autoPoll{{endif}} data-commentsType='reviews' data-baseURL='{$record->url()}' {{if $record->isLastPage('reviews')}}data-lastPage{{endif}} data-feedID='records{$record::$customDatabaseId}-{$record->id}-reviews' id='reviews'>
+	{{if $record->reviewForm()}}
+		{{if $record->locked()}}
+			<strong class='ipsType_warning'><i class='fa fa-info-circle'></i> {lang="item_locked_can_review"}</strong>
+		{{endif}}
+		<div id='elRecordReviewForm'>
+			{$record->reviewForm()|raw}
+		</div>
+	{{else}}
+		{{if $record->hasReviewed()}}
+			<!-- Already reviewed -->
+		{{elseif $record->locked()}}
+			{template="commentUnavailable" group="forms" location="front" app="core" params="'item_locked_cannot_review'"}
+		{{elseif \IPS\Member::loggedin()->restrict_post}}
+			{{if \IPS\Member::loggedIn()->restrict_post == -1}}
+				{template="reviewUnavailable" group="forms" location="front" app="core" params="'restricted_cannot_comment'"}
+			{{else}}
+				{template="reviewUnavailable" group="forms" location="front" app="core" params="'restricted_cannot_comment', \IPS\Member::loggedIn()->warnings(5,NULL,'rpa'), \IPS\Member::loggedIn()->restrict_post"}
+			{{endif}}
+		{{elseif \IPS\Member::loggedIn()->members_bitoptions['unacknowledged_warnings']}}
+			{template="reviewUnavailable" group="forms" location="front" app="core" params="'unacknowledged_warning_cannot_post', \IPS\Member::loggedIn()->warnings( 1, FALSE )"}
+		{{endif}}
+	{{endif}}
+	{{if count( $record->reviews() )}}
+		{{if !$record->hasReviewed()}}<hr class='ipsHr'>{{endif}}
+		<div class="ipsClearfix ipsSpacer_bottom">
+			{{if $record->reviewPageCount() > 1}}
+				<div class="ipsPos_left ipsResponsive_noFloat">
+					{$record->reviewPagination( array( 'tab', 'sort' ) )|raw}
+				</div>
+			{{endif}}
+			<div class="ipsClearfix ipsPos_right ipsResponsive_hidePhone">
+				<ul class="ipsButtonRow ipsClearfix">
+					<li data-action="tableFilter">
+						<a href="{$record->url()->setQueryString( array( 'd' => $record::$customDatabaseId, 'tab' => 'reviews', 'page' => 1, 'sort' => 'helpful' ) )}" class="{{if !isset( request.sort ) or request.sort != 'newest'}}ipsButtonRow_active{{endif}}" data-action="filterClick">{lang="most_helpful"}</a>
+					</li>
+					<li data-action="tableFilter">
+						<a href="{$record->url()->setQueryString( array( 'd' => $record::$customDatabaseId, 'tab' => 'reviews', 'page' => 1, 'sort' => 'newest' ) )}" class="{{if isset( request.sort ) and request.sort == 'newest'}}ipsButtonRow_active{{endif}}" data-action="filterClick">{lang="newest"}</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<div data-role='commentFeed' data-controller='core.front.core.moderation'>
+			<form action="{$record->url()->csrf()->setQueryString( 'do', 'multimodReview' )}" method="post" data-ipsPageAction data-role='moderationTools'>
+				{{$reviewCount=0; $timeLastRead = $record->timeLastRead(); $lined = FALSE;}}
+				{{foreach $record->reviews() as $review}}
+					{{if !$lined and $timeLastRead and $timeLastRead->getTimestamp() < $review->mapped('date')}}
+						{{if $lined = TRUE and $reviewCount}}
+							<hr class="ipsCommentUnreadSeperator">
+						{{endif}}
+					{{endif}}
+					{{$reviewCount++;}}
+					{$review->html()|raw}
+				{{endforeach}}
+				{template="commentMultimod" app="core" group="global" params="$record, 'review'"}
+			</form>
+		</div>
+		{{if $record->reviewPageCount() > 1}}
+			<div>
+				{$record->reviewPagination( array( 'tab', 'sort' ) )|raw}
+			</div>
+		{{endif}}
+	{{elseif !$record->canReview()}}
+		<p class="ipsType_normal ipsType_light ipsType_reset" data-role="noReviews">{lang="no_reviews"}</p>
+	{{endif}}
+</div>]]></template_content>
+ </template>
+ <template template_title="rssItemWithImage" template_group="releasenotes" template_location="database" template_original_group="listing">
+  <template_params>$content, $image</template_params>
+  <template_content><![CDATA[<p><img src="{file="$image" extension="cms_Records"}" /></p>
+{$content|raw}]]></template_content>
+ </template>
+</database>
